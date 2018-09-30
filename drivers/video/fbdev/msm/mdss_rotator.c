@@ -393,15 +393,6 @@ static int mdss_rotator_install_fence_fd(struct mdss_rot_entry_container *req)
 	return ret;
 }
 
-static void mdss_rotator_install_fence_fd(struct mdss_rot_entry_container *req)
-{
-	int i = 0;
-
-	for (i = 0; i < req->count; i++)
-		sync_fence_install(req->entries[i].output_fence,
-				req->entries[i].output_fence_fd);
-}
-
 static int mdss_rotator_create_fence(struct mdss_rot_entry *entry)
 {
 	int ret = 0, fd;
@@ -2281,7 +2272,6 @@ static int mdss_rotator_handle_request(struct mdss_rot_mgr *mgr,
 		goto handle_request_err1;
 	}
 
-	mdss_rotator_install_fence_fd(req);
 	mdss_rotator_queue_request(mgr, private, req);
 
 	mutex_unlock(&mgr->lock);
@@ -2448,7 +2438,6 @@ static int mdss_rotator_handle_request32(struct mdss_rot_mgr *mgr,
 		goto handle_request32_err1;
 	}
 
-	mdss_rotator_install_fence_fd(req);
 	mdss_rotator_queue_request(mgr, private, req);
 
 	mutex_unlock(&mgr->lock);
