@@ -1089,4 +1089,8 @@ config SND_SOC_TPA6130A2
 	tristate "Texas Instruments TPA6130A2 headphone amplifier"
 	depends on I2C
 
+
+config CONFIG_TAS2560_CODEC_STEREO
+	tristate "Texas Instruments TAS2560 SmartAmp(R)"
+
 endmenu
