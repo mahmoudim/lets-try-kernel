@@ -342,16 +342,6 @@ dtbo-$(CONFIG_ARCH_MSM8917) += msm8917-mtp-overlay.dtbo \
 	apq8017-cdp-overlay.dtbo \
 	apq8017-cdp-wcd-rome-overlay.dtbo
 
-dtbo-$(CONFIG_ARCH_MSM8953) += msm8953-mtp-overlay.dtbo \
-	msm8953-cdp-overlay.dtbo \
-	msm8953-rcm-overlay.dtbo \
-	msm8953-ipc-overlay.dtbo \
-	msm8953-qrd-overlay.dtbo \
-	msm8953-iot-mtp-overlay.dtbo \
-	msm8953-ext-codec-mtp-overlay.dtbo \
-	msm8953-ext-codec-rcm-overlay.dtbo \
-	msm8953-cdp-1200p-overlay.dtbo
-
 dtbo-$(CONFIG_ARCH_SDM450) += msm8953-mtp-overlay.dtbo \
 	msm8953-cdp-overlay.dtbo \
 	msm8953-rcm-overlay.dtbo \
@@ -478,39 +468,9 @@ sdm429-cdp-overlay.dtbo-base := sdm429.dtb \
 	msm8937-interposer-sdm429.dtb
 sdm429-qrd-overlay.dtbo-base := sdm429.dtb \
 	msm8937-interposer-sdm429.dtb
+
 else
-dtb-$(CONFIG_ARCH_MSM8953) += msm8953-cdp.dtb \
-	msm8953-mtp.dtb \
-	msm8953-ext-codec-mtp.dtb \
-	msm8953-qrd-sku3.dtb \
-	msm8953-rcm.dtb \
-	apq8053-rcm.dtb \
-	msm8953-ext-codec-rcm.dtb \
-	apq8053-cdp.dtb \
-	apq8053-ipc.dtb \
-	msm8953-ipc.dtb \
-	apq8053-mtp.dtb \
-	apq8053-ext-audio-mtp.dtb \
-	apq8053-ext-codec-rcm.dtb \
-	msm8953-cdp-1200p.dtb \
-	msm8953-iot-mtp.dtb \
-	apq8053-iot-mtp.dtb \
-	apq8053-lite-dragon-v1.0.dtb \
-	apq8053-lite-dragon-v2.0.dtb \
-	apq8053-lite-dragon-v2.1.dtb \
-	apq8053-lite-dragon-v2.2.dtb \
-	apq8053-lite-dragon-v2.2.1.dtb \
-	apq8053-lite-dragon-v2.3.dtb \
-	apq8053-lite-dragon-v2.4.dtb \
-	apq8053-lat-concam-dev.dtb \
-	apq8053-lat-concam-proto.dtb \
-	msm8953-pmi8940-cdp.dtb \
-	msm8953-pmi8940-mtp.dtb \
-	msm8953-pmi8937-cdp.dtb \
-	msm8953-pmi8937-mtp.dtb \
-	msm8953-pmi8940-ext-codec-mtp.dtb \
-	msm8953-pmi8937-ext-codec-mtp.dtb \
-	msm8953-pmi632-cdp-s2.dtb
+dtb-$(CONFIG_DTB_OXYGEN) += msm8953-oxygen.dtb
 
 dtb-$(CONFIG_ARCH_MSM8937) += msm8937-pmi8950-mtp.dtb \
 	msm8937-interposer-sdm439-cdp.dtb \
